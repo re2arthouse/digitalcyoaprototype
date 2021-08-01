@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamster Adventure</title>
+</head>
+<body>
+<div id="audiosettings"></div>
+</br>
+<div id="contents">
+<h1>Hamster Adventure</h1>
+<button type='button' onclick='f1()'>Start</button>
+</div>
+</br>
+<div id="page"></div>
+<script>
+var page = 0;
+document.getElementById('page').innerHTML = "Current page: " + page + " | Enter page number: ";
+function f1() {
+document.getElementById('contents').innerHTML = "<p>You are a pet hamster. You are waiting for your owner to come home. What do you want to do in the meantime?</p></br><button type='button' onclick='f2()'>Run in the wheel</button> <button type='button' onclick='f3()'>Eat</button>";
+page = 1;
+}
+
+function f2() {
+document.getElementById('contents').innerHTML = "<p>You run in the wheel for a few minutes. You feel happy. What do you want to do next?</p>";
+page = 2;
+}
+
+function f3() {
+document.getElementById('contents').innerHTML = "<p>You eat some seeds from the bowl. You are full. What do you want to do next?</p>";
+page = 3;
+}
+</script>
+</body>
+</html> 
